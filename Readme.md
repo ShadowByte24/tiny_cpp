@@ -1,7 +1,7 @@
 # tinycpp 🧩  
 A Tiny C++-like Language Interpreter written in Python
 
-tinycpp is a **minimal C++-style language interpreter** implemented from scratch in Python.
+tinycpp is a **minimal C++-style language interpreter** implemented from scratch in Python.  
 It is designed as an educational project to understand how programming languages work internally.
 
 This project demonstrates:
@@ -19,32 +19,32 @@ The syntax and structure are inspired by **C++**, but the language is intentiona
 ### ✅ Data Types
 - `int` (integer variables)
 
+---
 
 ### ✅ Statements
 
 - Variable declaration  
   ```cpp
   int x;
-```
+  ```
 
-* Assignment
-
+- Assignment  
   ```cpp
   x = 10;
   ```
 
-* `if / else`
+- `if / else`
+- `while` loop
+- Block statements using `{ }`
 
-* `while` loop
-
-* Block statements using `{ }`
+---
 
 ### ✅ Expressions
 
-* Arithmetic operators: `+ - * /`
-* Comparison operators: `< > <= >=`
-* Equality operators: `== !=`
-* Parentheses for grouping
+- Arithmetic operators: `+ - * /`
+- Comparison operators: `< > <= >=`
+- Equality operators: `== !=`
+- Parentheses for grouping
 
 ---
 
@@ -94,7 +94,7 @@ Example:
 int x;
 ```
 
-Tokens:
+Tokens produced:
 
 ```
 INT  ID  SEMI
@@ -129,35 +129,31 @@ Assign
 The AST represents the **structure** of the program, not its execution.
 
 Key AST nodes:
-
-* Program
-* Block
-* Assign
-* Var
-* Num
-* BinOp
-* If
-* While
+- Program
+- Block
+- Assign
+- Var
+- Num
+- BinOp
+- If
+- While
 
 ---
 
 ### 4️⃣ Interpreter
 
-The interpreter walks the AST and executes it:
+The interpreter walks the AST and executes it using the **visitor pattern**:
 
-* Maintains a symbol table (`env`)
-* Evaluates expressions
-* Executes control flow (`if`, `while`)
-
-This is implemented using the **visitor pattern**.
+- Maintains a symbol table (`env`)
+- Evaluates expressions
+- Executes control flow (`if`, `while`)
 
 ---
 
 ## ▶️ How to Run
 
 ### Requirements
-
-* Python 3.10+
+- Python 3.10+
 
 ### Run
 
@@ -175,32 +171,29 @@ Expected output:
 
 ## 🚧 Current Limitations
 
-* `for` loop is parsed but not executed
-* Single global scope (no block-level scoping)
-* No `print()` statement inside the language
-* No functions or return statements
+- `for` loop is parsed but not executed
+- Single global scope (no block-level scoping)
+- No `print()` statement inside the language
+- No functions or return statements
 
-These limitations are intentional to keep the interpreter simple.
+These limitations are intentional to keep the interpreter simple and focused.
 
 ---
 
 ## 🛣 Planned Extensions
 
-* Full `for` loop execution
-* `print(x);` statement
-* Block-level variable scoping
-* Functions and return values
-* Reading source code from `.cpp`-like files
+- Full `for` loop execution
+- `print(x);` statement
+- Block-level variable scoping
+- Functions and return values
+- Reading source code from `.cpp`-like files
 
 ---
 
 ## 🎓 Educational Purpose
 
 This project is ideal for learning:
-
-* How C++-style languages are parsed
-* How AST-based interpreters work
-* Recursive-descent parsing techniques
-* Visitor pattern in interpreters
-
-````
+- How C++-style languages are parsed
+- How AST-based interpreters work
+- Recursive-descent parsing techniques
+- Visitor pattern in interpreters
