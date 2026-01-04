@@ -19,6 +19,7 @@ The syntax and structure are inspired by **C++**, but the language is intentiona
 ### ✅ Data Types
 - `int` (integer variables)
 
+```md
 ### ✅ Statements
 
 - Variable declaration  
