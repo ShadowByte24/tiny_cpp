@@ -1,4 +1,3 @@
-````md
 # tinycpp 🧩  
 A Tiny C++-like Language Interpreter written in Python
 
@@ -21,6 +20,7 @@ The syntax and structure are inspired by **C++**, but the language is intentiona
 - `int` (integer variables)
 
 ### ✅ Statements
+
 - Variable declaration  
   ```cpp
   int x;
